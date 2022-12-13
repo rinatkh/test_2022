@@ -12,10 +12,10 @@ down:
 	docker-compose -f ${DCOMPOSE} down --remove-orphans
 
 build:
-	${DOCKER_BUILD_KIT} docker-compose build --build-arg POSTGRES_USER=${POSTGRES_USER}
+	${DOCKER_BUILD_KIT} docker-compose build --build-arg
 
 build-debug:
-	${DOCKER_BUILD_KIT} docker-compose build --build-arg POSTGRES_USER=${POSTGRES_USER}
+	${DOCKER_BUILD_KIT} docker-compose build --build-arg
 
 up:
 	docker-compose --compatibility -f ${DCOMPOSE} up -d --remove-orphans
@@ -26,4 +26,4 @@ up-debug:
 # Vendoring is useful for local debugging since you don't have to
 # reinstall all packages again and again in docker
 mod:
-	go mod tidy -compat=1.18 && go mod vendor && go install ./...
+	go mod tidy -compat=1.19 && go mod vendor && go install ./...
