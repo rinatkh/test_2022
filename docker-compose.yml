@@ -9,8 +9,10 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     volumes:
-      - ./opt/pics/
+      - /opt/pics/
     container_name: service
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:latest

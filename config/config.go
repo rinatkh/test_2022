@@ -24,7 +24,7 @@ type SystemConfig struct {
 }
 
 type LoggerConfig struct {
-	Level string `json:"level"`
+	Level string
 }
 
 type ServerConfig struct {

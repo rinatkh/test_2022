@@ -12,10 +12,10 @@ down:
 	docker-compose -f ${DCOMPOSE} down --remove-orphans
 
 build:
-	${DOCKER_BUILD_KIT} docker-compose build --build-arg
+	${DOCKER_BUILD_KIT} docker-compose build
 
 build-debug:
-	${DOCKER_BUILD_KIT} docker-compose build --build-arg
+	${DOCKER_BUILD_KIT} docker-compose build
 
 up:
 	docker-compose --compatibility -f ${DCOMPOSE} up -d --remove-orphans

@@ -4,11 +4,8 @@ WORKDIR /app
 
 RUN ls -la
 
-ENV AE_KEY=""
-
 COPY go.mod ./
 COPY go.sum ./
-RUN #go mod download
 
 COPY . .
 
